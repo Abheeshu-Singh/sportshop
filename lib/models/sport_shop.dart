@@ -5,14 +5,16 @@ class SportShop extends ChangeNotifier {
   final List<Sport> _shop = [
     Sport(
         name: 'Basket Ball',
-        price: '450',
+        price: 'Rs 450',
         imagePath: "lib/images/basket-ball.png"),
     Sport(
-        name: 'Boomerang', price: '450', imagePath: "lib/images/boomerang.png"),
-    Sport(name: 'Rugby', price: '450', imagePath: "lib/images/rugby.png"),
+        name: 'Boomerang',
+        price: 'Rs 450',
+        imagePath: "lib/images/boomerang.png"),
+    Sport(name: 'Rugby', price: 'Rs 450', imagePath: "lib/images/rugby.png"),
     Sport(
         name: 'Tennis Ball',
-        price: '450',
+        price: 'Rs 450',
         imagePath: "lib/images/tennis-ball.png"),
   ];
 

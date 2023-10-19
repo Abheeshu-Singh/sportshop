@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sports_shop/models/sport.dart';
 
+// ignore: must_be_immutable
 class SportTile extends StatelessWidget {
   final Sport sport;
   void Function()? onPressed;

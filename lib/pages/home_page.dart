@@ -20,8 +20,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _pages = [
-    ShopPage(),
-    CartPage(),
+    const ShopPage(),
+    const CartPage(),
   ];
 
   @override

@@ -16,6 +16,8 @@ class _CartPageState extends State<CartPage> {
     Provider.of<SportShop>(context, listen: false).removeItemFromCart(sport);
   }
 
+  void payNow() {}
+
   @override
   Widget build(BuildContext context) {
     return Consumer<SportShop>(
@@ -24,7 +26,7 @@ class _CartPageState extends State<CartPage> {
           padding: const EdgeInsets.all(25.0),
           child: Column(
             children: [
-              Text(
+              const Text(
                 'Your Cart',
                 style: TextStyle(fontSize: 20),
               ),
@@ -36,10 +38,26 @@ class _CartPageState extends State<CartPage> {
                     return SportTile(
                         sport: eachSport,
                         onPressed: () => removeFromCart(eachSport),
-                        icon: Icon(Icons.delete));
+                        icon: const Icon(Icons.delete));
                   },
                 ),
-              )
+              ),
+              GestureDetector(
+                onTap: payNow,
+                child: Container(
+                  padding: const EdgeInsets.all(25),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.green[500],
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Center(
+                    child: Text(
+                      'Pay Now',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
